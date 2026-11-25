@@ -233,7 +233,7 @@ function drawCard(h: ReturnType<typeof harness>, result: unknown) {
 	const tool = h.tool() as unknown as Pick<ToolDefinition, "renderCall" | "renderResult">;
 	const plainTheme = { fg: (_color: string, text: string) => text, bold: (text: string) => text } as unknown as Theme;
 	let invalidations = 0;
-	let card: { render(width: number): string[] } | undefined;
+	let card: { render(width: number): readonly string[] } | undefined;
 	const context = {
 		state: {},
 		toolCallId: "call-1",

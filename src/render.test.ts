@@ -229,7 +229,7 @@ describe("background card following the agent's record (docs/07 §1.4)", () => {
 				draw();
 			},
 		} as never;
-		let component: { render(width: number): string[] } | undefined;
+		let component: { render(width: number): readonly string[] } | undefined;
 		const draw = () => {
 			component = renderers.renderCall(args as never, t, context);
 			renderers.renderResult(
